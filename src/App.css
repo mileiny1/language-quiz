@@ -1,0 +1,185 @@
+/* General Page Styling */
+body {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title Styling */
+h1 {
+  font-weight: 800;
+  color: #e65100;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;
+  font-size: 2.6rem;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+h2, h3, h4 {
+  color: #bf360c;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Quiz Container */
+.container {
+  max-width: 720px;
+  margin: auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+}
+
+/* Question Card Styling */
+.card {
+  background: #fffdf7;
+  border-radius: 16px;
+  padding: 1.8rem;
+  margin-top: 1.2rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.card:hover {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+/* Answer Buttons */
+button.btn {
+  width: 100%;
+  max-width: 420px;
+  padding: 14px 22px;
+  font-size: 1.1rem;
+  margin: 0.7rem auto;
+  display: block;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+button.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Button colors */
+button.btn-primary {
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+  color: white;
+}
+
+button.btn-success {
+  background: linear-gradient(135deg, #66bb6a, #388e3c);
+  color: white;
+}
+
+button.btn-secondary {
+  background: linear-gradient(135deg, #9e9e9e, #616161);
+  color: white;
+}
+
+/* Correct / Wrong Animation */
+button.correct {
+  background: #43a047 !important;
+  color: white;
+  animation: pulseGreen 0.6s ease;
+}
+
+button.wrong {
+  background: #e53935 !important;
+  color: white;
+  animation: shake 0.4s ease;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+}
+
+/* Score Display */
+.score-display {
+  font-size: 1.7rem;
+  color: #d84315;
+  font-weight: 800;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+/* Footer Styling */
+footer {
+  background: linear-gradient(to right, #e65100, #ef6c00);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  button.btn {
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  button.btn {
+    font-size: 0.95rem;
+  }
+}
+footer {
+  background: linear-gradient(to right, #00796b, #0288d1);
+  color:  black;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+  letter-spacing: 0.5px;
+}
